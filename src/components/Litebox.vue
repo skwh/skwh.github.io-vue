@@ -4,7 +4,7 @@
     <button v-on:click="previous()"
             :disabled="previousImageIdx < 0"
             class="left">
-            &gt;&gt;
+            &lt;&lt;
     </button>
     <transition>
       <img :src="this.createPath(currentImageUrl)" />
@@ -12,7 +12,7 @@
     <button v-on:click="next()"
             :disabled="nextImageIdx == this.images.length"
             class="right">
-            &lt;&lt;
+            &gt;&gt;
     </button>
     <img :src="this.createPath(nextImageUrl)" class="hidden" />
   </div>
@@ -50,7 +50,7 @@ export default {
       this.nextImageUrl = this.images[this.nextImageIdx % this.images.length]
     },
     createPath (fileName) {
-      return '../../static/' + this.prefix + '/' + fileName
+      return process.env.BASE_URL + this.prefix + '/' + fileName
     }
   },
   mounted: function () {
