@@ -9,7 +9,7 @@
     <h3>
       <a class="in"
          target="_blank"
-         :href="`${baseUrl}Resume_5.pdf`">Resume</a>
+         :href="`${baseUrl}Resume_6.pdf`">Resume</a>
     </h3>
     <h3>
       <router-link class="in internal-link"
