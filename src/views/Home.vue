@@ -9,7 +9,7 @@
     <h3>
       <a class="in"
          target="_blank"
-         :href="`${baseUrl}Resume_7.pdf`">Resume</a>
+         :href="`${baseUrl}Resume_8.pdf`">Resume</a>
     </h3>
     <h3>
       <router-link class="in internal-link"
@@ -25,7 +25,7 @@ export default {
     return {
       pages: [
         ['Portfolio', '/portfolio'],
-        ['Resume', process.env.BASE_URL + 'Resume_5.pdf'],
+        ['Resume', process.env.BASE_URL + 'Resume_8.pdf'],
         ['Contact Me', '/contact-me']
       ],
       baseUrl: process.env.BASE_URL
