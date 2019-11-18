@@ -16,6 +16,53 @@ import Litebox from '../components/Litebox'
 
 const projects = {
   1: {
+    title: 'Cryptogram',
+    prefix: 'cryptogram',
+    titleLink: 'http://skwh.github.io/cryptogram',
+    subtitle: 'I created a web-based version of the game Cryptogram, based on the Android app of the same name.',
+    tech: 'Vanilla HTML, CSS, Javascript',
+    body: [
+      'After playing the game "Cryptogram" on the Android app store, I remembered a similar game I had played long ago and had very much enjoyed. There were a few things I didn\'t like about the Android app, so I decided to create my own version.',
+      'I am particularly proud of this project because I did a good job putting things into different modules and breaking routines into smaller functions. The interface uses custom HTML elements that are entirely styled using CSS.',
+      'I previously used an api in order to fetch quotes, but at some point the api went down. It was hard to find a free api alternative, so I replaced the api with a random list of quotes.',
+      'If I were to do this project again, I would try and use more functional programming. I think there are still some methods that could be improved.'
+    ],
+    images: [
+      'cryptogram.png',
+      'cryptogram-partial.png',
+      'cryptogram-hints.png'
+    ]
+  },
+  2: {
+    title: 'Either & Maybe in Typescript',
+    prefix: 'typescript-maybe',
+    titleLink: 'https://github.com/skwh/maybe',
+    subtitle: 'I made a small example library in Typescript for the Either pattern and the Maybe monad, based on Haskell. I also wrote an article about it for dev.to!',
+    tech: 'Typescript',
+    body: [
+      'After having some experience with the Either pattern in Haskell, I wondered how I could have applied it to the work I did at a summer internship with Slalom_Build. I hadn\'t seen the topic discussed much in the developer community, so I decided to write an article about it for the developer site dev.to.',
+      'I started with just the either pattern, but I soon extended it to the Maybe monad as well. I would say I don\'t completely understand the use of Monads in Haskell or even in coding in general, but the Maybe monad is one of the first introduced to new Haskell developers, so I felt I could somewhat faithfully replicate it. I learned a lot about Typescript generics with this project, and I got a lot of good feedback and pointers from the other developers who commented on my article.',
+      'The article is avaliable here: https://dev.to/polyov_dev/data-validation-in-typescript-using-the-either-pattern-4omk'
+    ],
+    images: [
+      'screenshot.png'
+    ]
+  },
+  3: {
+    title: 'D&D Assistant',
+    prefix: 'dnd-assistant',
+    titleLink: 'https://github.com/skwh/dnd-assistant',
+    subtitle: 'As a Haskell project, I made a CLI program to help when playing Dungeons and Dragons.',
+    tech: 'Haskell',
+    body: [
+      'This project was my first "major" Haskell project, where I intended to use more intermediate aspects of Haskell, such as the IO Monad and the structure of a project with a few different modules. These topics weren\'t covered in the class where I learned Haskell, so feeling confident with these features felt like a natural next step. Initially I had a very expansive plan for the different features and arguments avaliable, but I soon realized that I had far too many features and I couldn\'t figure out where start. So I restricted myself to the first few easy features and then tried to work from there.',
+      'Unfortunately I\'ve only been able to play a few sessions of D&D using it.'
+    ],
+    images: [
+      'screenshot.png'
+    ]
+  },
+  4: {
     title: 'gmg - GroupMe Client',
     prefix: 'groupme',
     titleLink: 'http://github.com/skwh/groupme-client',
@@ -51,41 +98,7 @@ const projects = {
       'list-item-design.png'
     ]
   },
-  2: {
-    title: 'Fairview High School - Website & Redesign',
-    prefix: 'fhs',
-    titleLink: 'http://fhsroyalbanner.com',
-    subtitle: 'In high school I joined the school\'s student-run newspaper, The Royal Banner, and overhauled the old wordpress-based site to a new, Ruby on Rails based one. After I graduated, I returned to the paper for a week and helped the staff create a new design for the website, which is now in development. The design included new typography, and a new layout for mobile.',
-    tech: 'Ruby on Rails, jQuery, SCSS, Figma (mockups)',
-    body: [
-      'When I first joined the school\'s newspaper, I found that the old website wasn\'t working well for users. It was inconsistent, hard to navigate, and many elements of it seemed to be broken or nonfunctional. The old website had been based off of WordPress and had not been sufficently maintained over the years. The newspaper staff wanted a website which would let them reach their readers and had a clear, consistent design that reflected the school\'s visual aesthetic (colors of red and black) and was unique to the newspaper. The staff also wanted a better way to engage with their audience better than the current system that had come with their WordPress site.',
-      'When I first began to design the site, I took the requests of the newspaper staff in mind. I centered my visual design around modern design styles and the school\'s colors: the title was large, bold, and black, and important links were marked by lighter and darker versions of the schoo\'s primary red. I made sure that the titles and images associated with stories got focus, and developed a layout based on a grid system and cards which would enable users to quickly and easily browse content. I took some inspiration from other news websites, like Wired and the New York Times, in considering how users would experience the front page and each story page on the website.',
-      'When it came to the newspaper staff, I tried to simplify and enrich the story creation and editing process as much as possible. The staff got access to a special section of the site which allowed them to browse the already published stories, images associated with those stories, and the special static pages on the site. They also were able to write a biography and include a picture of themselves on their profile page.',
-      'Some of my most interesting design challenges were unexpected ones. The staff requested a ticker be placed on the site that would allow them to include the scores of school sports games in a place which could easily be found, rather than writing a story about the game as it was progressing. The ticker I developed ended up being a bit of a mess, but it reliably scrolled through the games that were included by the staff.',
-      'The site that I created for the staff the first time was something that I was proud of, but it was also mired with my inexperience. The title that I had so proudly displayed in large, bold font took up most of the front page- it was stylistic, sure, but it meant that users had to scroll to see most of the content on the page. The site greeted them with its name - not with the content that they had come there for. I had also decided to use a carousel to display the most recent and important stories, something which meant that lots of content was relegated to a small section of the page. Finally, the way in which I had implemented the photos associated with stories meant that those photos were relegated to the top of the story, and were rather small in size. Most of the visual layout of the website was taken up by navigation and flair, not helpful or beautiful elements.',
-      'After a year in college, I returned to my high school\'s newspaper staff and asked them the same question that I had when I first joined: how does the website work for you? They had found and told me about the issues I detailed above. So I worked with the newspaper\'s visual designer and leads to fix some of these issues.',
-      'The first thing we did was do away with the huge newspaper title. Now, the title was relegated to the upper left hand side of the page. Instead, most of the page would be taken up by a story\'s headline image- bringing more focus back to the story itself. This was inspired by headline images on sites like the New York Times Magazine and Medium. We then placed the story\'s content on a card so that it stood out from the image itself. We decided to move the card in such a way that it overlapped with the image- fusing the image of the story with its textual content.',
-      'Next, we did away with a sidebar holding relevant stories. We wanted the focus to be back on the story the user was currently reading. A sidebar took away from that by introducing more textual noise while a user was trying to read. So, recommended stories became a list of smaller cards at the bottom of the current story, all of which used their headline image as a background, again emphasizing imagery.'
-    ],
-    images: [
-      'desktop-homepage-2.png',
-      'desktop-storypage-2.png',
-      'desktop-control-panel-2.png',
-      'mobile-homepage.png',
-      'mobile-search.png',
-      'mobile-storypage.png',
-      'navigation-drawer.png',
-      'typography-2.png',
-      'logo-typography-2.png',
-      'desktop-homepage.png',
-      'desktop-storypage.png',
-      'desktop-control-panel.png',
-      'typography.png',
-      'logo-typography.png',
-      'colors.png'
-    ]
-  },
-  3: {
+  5: {
     title: 'Hello LA! - Hack @ Brown 2016 Entry',
     prefix: 'hello-la',
     titleLink: 'https://hello-la.herokuapp.com/',

@@ -26,9 +26,11 @@ export default {
   data () {
     return {
       projectNames: [
-        ['Groupme Electron App', 1],
-        ['Royal Banner Website', 2],
-        ['Hello LA!', 3]
+        ['Cryptogram Game', 1],
+        ['Either & Maybe in Typescript', 2],
+        ['D&D Assistant', 3],
+        ['Groupme Electron App', 4],
+        ['Hello LA!', 5]
       ]
     }
   }
