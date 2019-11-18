@@ -17,7 +17,7 @@ import Litebox from '../components/Litebox'
 const projects = {
   1: {
     title: 'Cryptogram',
-    prefix: 'cryptogram',
+    prefix: 'cryptogram-assets',
     titleLink: 'http://skwh.github.io/cryptogram',
     subtitle: 'I created a web-based version of the game Cryptogram, based on the Android app of the same name.',
     tech: 'Vanilla HTML, CSS, Javascript',
