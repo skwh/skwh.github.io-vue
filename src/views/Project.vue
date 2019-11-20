@@ -135,7 +135,7 @@ div.lightbox {
 }
 
 .project>p {
-  text-indent: 2em;
+  text-indent: 2rem;
 }
 
 .project>h2, .project>h4 {
@@ -143,13 +143,13 @@ div.lightbox {
 }
 
 .project>h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .project>h4 {
   color: rgba(200,200,200,1);
-  margin-left: 1em;
-  font-size: 1.25em;
+  margin-left: 1rem;
+  font-size: 1.25rem;
 }
 
 .project>h2>a, h3>a {
@@ -166,22 +166,22 @@ h3>a:hover {
 
 .project>h2>a::after, h3>a::after {
   content: "  >>";
-  font-size: 0.75em;
+  font-size: 0.75rem;
   transition: margin-left 0.2s;
 }
 
 .project>h2>a:hover::after {
-  margin-left: 0.3em;
+  margin-left: 0.3rem;
   color: #AAA;
 }
 
 h3>a:hover::after {
-  margin-left: 0.3em;
+  margin-left: 0.3rem;
 }
 
 .project>p {
   font-weight: 400;
-  line-height: 1.75em;
-  font-size: 1.15em;
+  line-height: 1.75rem;
+  font-size: 1.15rem;
 }
 </style>

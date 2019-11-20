@@ -61,7 +61,7 @@ export default {
 
 <style scoped>
   .lightbox {
-      height: 65vh;
+      height: 10rem;
       display: flex;
       justify-content: space-around;
   }
@@ -117,5 +117,16 @@ export default {
 
   .hidden {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .lightbox {
+      height: 15rem;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .lightbox {
+      height: 25rem;
+    }
   }
 </style>

@@ -1,8 +1,7 @@
 <template>
   <main class='centered'>
     <h1>Evan Derby</h1>
-    <h4 class="subtitle">Full-Stack Developer | UI/UX Engineer</h4>
-    <h5 class="subtitle">&amp; Haskell enthusiast</h5>
+    <h4 class="subtitle">Full-Stack Developer &amp; UI/UX Engineer</h4>
     <h3>
       <router-link class="in internal-link"
                    to="/portfolio">Portfolio</router-link>
@@ -36,19 +35,16 @@ export default {
 </script>
 
 <style>
-h4.subtitle {
+.subtitle {
   margin: 0;
-  margin-left: 6px;
-  transform: translateY(-18px);
+  margin-left: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-h5 {
-  margin: 0;
+@media screen and (min-width:768px) {
+  .subtitle {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+  }
 }
-
-h5.subtitle {
-  text-align: right;
-  transform: translateY(-18px);
-}
-
 </style>

@@ -83,7 +83,7 @@ p, span {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 5rem;
 }
 
 h1, h3 {
@@ -91,13 +91,13 @@ h1, h3 {
 }
 
 h3 {
-  text-indent: 0.75em;
-  font-size: 1.35em;
+  text-indent: 0.75rem;
+  font-size: 1.35rem;
 }
 
 h4 {
-  font-size: 1.25em;
-  margin: 0.5em;
+  font-size: 1.25rem;
+  margin: 0.5rem;
 }
 
 h4>a:hover {
@@ -113,7 +113,7 @@ h3>a {
 }
 
 h3>a::after, h4>a::before {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   transition: margin 0.2s;
 }
 
@@ -137,28 +137,41 @@ code {
   background-color: rgba(255,255,255,0.3);
   border-radius: 5px;
   display: block;
-  padding: 1em;
+  padding: 1rem;
   text-align: center;
 }
 
-/* @media only screen and (max-width: 320px) {
-  main {
-    width: 90%;
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 0.75em;
+  }
+  h1 {
+    font-size: 2.9rem;
+    word-spacing: -0.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
   }
 }
-@media only screen and (max-width:425px) {
-  main {
-    width: 85%;
+@media only screen and (min-width:425px) {
+  html {
+    font-size: 0.95em;
+  }
+  h3 {
+    font-size: 1.35rem;
   }
 }
-@media only screen and (max-width:768px) {
-  main {
-    width: 70%;
+@media only screen and (min-width:768px) {
+  html {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 4rem;
   }
 }
-@media only screen and (max-width:1440px) {
-  main {
-    width: 60%;
+@media only screen and (min-width:1440px) {
+  h1 {
+    font-size: 5rem;
   }
-} */
+}
 </style>
