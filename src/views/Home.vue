@@ -23,7 +23,7 @@
     <h3>
       <a class="in"
          target="_blank"
-         :href="`${baseUrl}Resume_9.pdf`">{{ $t('resume') }}</a>
+         :href="`${baseUrl}Resume_11.pdf`">{{ $t('resume') }}</a>
     </h3>
     <h3>
       <router-link class="in internal-link"
