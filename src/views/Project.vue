@@ -1,13 +1,62 @@
+<i18n>
+{
+  "en": {
+    "cryptogram-game": {
+      "title": "Cryptogram",
+      "subtitle": "I created a web-based version of the game Cryptogram, based on the Android app of the same name."
+    },
+    "either-maybe": {
+      "title": "Either & Maybe with Typescript",
+      "subtitle": "I made a small example library in Typescript for the Either pattern and the Maybe monad, based on Haskell. I also wrote an article about it for dev.to!"
+    },
+    "dnd-assistant": {
+      "title": "D&D Assistant",
+      "subtitle": "As a Haskell project, I made a CLI program to help when playing Dungeons and Dragons."
+    },
+    "groupme-client": {
+      "title": "gmg - GroupMe Client",
+      "subtitle": "I designed and implemented an Electron-based GroupMe client, making use of GroupMe's extensive public API and push messaging service."
+    },
+    "hello-la": {
+      "title": "Hello LA! - Hack @ Brown 2016 Entry",
+      "subtitle": "As a high school senior I attended Hack @ Brown 2016, a hackathon sponsored by Brown University."
+    }
+  },
+  "de": {
+    "cryptogram-game": {
+      "title": "Kryptogramm",
+      "subtitle": "Ich erstellte eine Web-Version von das Spiel Kryptogramm, darauf die gleichnamige Android App beruhend ist."
+    },
+    "either-maybe": {
+      "title": "Either und Maybe Entwurfsmuster mit Typescript",
+      "subtitle": "Ich erstellte eine kleinen beispielweise Programmbibliothek für das Either und Maybe Entwurfsmuster, das auf Haskell beruhend ist. Dann schriebte ich auch einen Artikel dawegen auf dev.to!"
+    },
+    "dnd-assistant": {
+      "title": "D&D Hilfskraft",
+      "subtitle": "Als Haskell Projekt, erstellte ich ein CLI Programm, um wenn D&D spielen zu helfen."
+    },
+    "groupme-client": {
+      "title": "gmg - GroupMe Client",
+      "subtitle": "Ich entwarf und erstellte einen GroupMe Client mit Electron, der die öffentlich, umfänglich Programmierschnittstelle der GroupMe benutzte."
+    },
+    "hello-la": {
+      "title": "Hallo LA! - Hack @ Brown 2016 Eintragung",
+      "subtitle": "Als Gymnasium Student, besuchte ich Hack @ Brown 2016, ein Hackathon von Brown Universität gefördet wurde."
+    }
+  }
+}
+</i18n>
+
 <template>
   <main class='project'>
-    <h2><a :href="titleLink" target="_blank">{{ title }}</a></h2>
-    <h4>{{ tech }}</h4>
-    <p>{{ subtitle }}</p>
-    <litebox :images="this.images"
-             :prefix="this.prefix"></litebox>
-    <p v-for="(paragraph,index) in body" :key="`paragraph-${index}`">{{ paragraph }}</p>
+    <h2><a :href="project.titleLink" target="_blank">{{ $t(`${projectName}.title`) }}</a></h2>
+    <h4>{{ project.tech }}</h4>
+    <p>{{ $t(`${projectName}.subtitle`) }}</p>
+    <litebox :images="this.project.images"
+             :prefix="this.project.prefix"></litebox>
+    <p v-for="(paragraph, index) in project.body" :key="`paragraph-${index}`">{{ paragraph }}</p>
     <h4><router-link class="out"
-      v-bind:to="'/portfolio'">Back</router-link></h4>
+      v-bind:to="'/portfolio'">{{ $t('back') }}</router-link></h4>
   </main>
 </template>
 
@@ -15,11 +64,9 @@
 import Litebox from '../components/Litebox'
 
 const projects = {
-  1: {
-    title: 'Cryptogram',
+  'cryptogram-game': {
     prefix: 'cryptogram-assets',
     titleLink: 'http://skwh.github.io/cryptogram',
-    subtitle: 'I created a web-based version of the game Cryptogram, based on the Android app of the same name.',
     tech: 'Vanilla HTML, CSS, Javascript',
     body: [
       'After playing the game "Cryptogram" on the Android app store, I remembered a similar game I had played long ago and had very much enjoyed. There were a few things I didn\'t like about the Android app, so I decided to create my own version.',
@@ -33,11 +80,9 @@ const projects = {
       'cryptogram-hints.png'
     ]
   },
-  2: {
-    title: 'Either & Maybe in Typescript',
+  'either-maybe': {
     prefix: 'typescript-maybe',
     titleLink: 'https://github.com/skwh/maybe',
-    subtitle: 'I made a small example library in Typescript for the Either pattern and the Maybe monad, based on Haskell. I also wrote an article about it for dev.to!',
     tech: 'Typescript',
     body: [
       'After having some experience with the Either pattern in Haskell, I wondered how I could have applied it to the work I did at a summer internship with Slalom_Build. I hadn\'t seen the topic discussed much in the developer community, so I decided to write an article about it for the developer site dev.to.',
@@ -48,11 +93,9 @@ const projects = {
       'screenshot.png'
     ]
   },
-  3: {
-    title: 'D&D Assistant',
+  'dnd-assistant': {
     prefix: 'dnd-assistant',
     titleLink: 'https://github.com/skwh/dnd-assistant',
-    subtitle: 'As a Haskell project, I made a CLI program to help when playing Dungeons and Dragons.',
     tech: 'Haskell',
     body: [
       'This project was my first "major" Haskell project, where I intended to use more intermediate aspects of Haskell, such as the IO Monad and the structure of a project with a few different modules. These topics weren\'t covered in the class where I learned Haskell, so feeling confident with these features felt like a natural next step. Initially I had a very expansive plan for the different features and arguments avaliable, but I soon realized that I had far too many features and I couldn\'t figure out where start. So I restricted myself to the first few easy features and then tried to work from there.',
@@ -62,11 +105,9 @@ const projects = {
       'screenshot.png'
     ]
   },
-  4: {
-    title: 'gmg - GroupMe Client',
+  'groupme-client': {
     prefix: 'groupme',
     titleLink: 'http://github.com/skwh/groupme-client',
-    subtitle: 'I designed and implemented an Electron-based GroupMe client, making use of GroupMe\'s extensive public API and push messaging service.',
     tech: 'Electron, Angular 4, SCSS, Figma (mockups)',
     body: [
       'For this project, my emphasis was on creating a messaging application which was usable and acted on a user\'s expectations of how messaging applications should work, but at the same time, stood out, was easy to use, and looked good. I also wanted to tackle the issue of using the familiar design featured in GroupMe\'s mobile app and existing Web clients, while still creating my own design.',
@@ -98,11 +139,9 @@ const projects = {
       'list-item-design.png'
     ]
   },
-  5: {
-    title: 'Hello LA! - Hack @ Brown 2016 Entry',
+  'hello-la': {
     prefix: 'hello-la',
     titleLink: 'https://hello-la.herokuapp.com/',
-    subtitle: 'As a high school senior I attended Hack @ Brown 2016, a hackathon sponsored by Brown University.',
     tech: 'Ruby on Rails, jQuery, SCSS',
     body: [
       'For my team\'s project, I acted as a full-stack developer, and worked closely with two design students on the team to translate Adobe Illustrator mockups into working code. I also developed the back-end functionality of the website, which acted as a faux tourism website for Los Angeles. This project won the "Best UX" award, from sponsor pMD.'
@@ -116,12 +155,12 @@ const projects = {
 export default {
   name: 'Project',
   components: { Litebox },
-  data () {
-    return this.getProjectForId(this.$route.params.id)
-  },
-  methods: {
-    getProjectForId (id) {
-      return projects[id]
+  computed: {
+    project () {
+      return projects[this.$route.params.name]
+    },
+    projectName () {
+      return this.$route.params.name
     }
   }
 }

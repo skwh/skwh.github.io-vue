@@ -1,15 +1,38 @@
+<i18n>
+{
+  "en": {
+    "projects": [
+      "Cryptogram Game",
+      "Either and Maybe in Typescript",
+      "D&D Assistant",
+      "GroupMe Electron App",
+      "Hello LA!"
+    ]
+  },
+  "de": {
+    "projects": [
+      "Kryptogramm Spiel",
+      "Either und Maybe Entwurfsmuster mit Typescript",
+      "D&D Hilfskraft",
+      "GroupMe Electron App",
+      "Hallo LA!"
+    ]
+  }
+}
+</i18n>
+
 <template>
   <main>
-    <h1>Portfolio</h1>
-    <project-list-item v-for="project in projectNames"
-                       :key="project[1]"
-                       :projectId="project[1]">
-                        {{ project[0] }}
+    <h1>{{ $t('portfolio') }}</h1>
+    <project-list-item v-for="(project, idx) in projectUrls"
+                       :key="idx"
+                       :projectId="project">
+                        {{ $t(`projects[${idx}]`) }}
                     </project-list-item>
     <h4>
       <router-link class="out"
                    v-bind:to="'/'">
-                     Back
+                     {{ $t('back') }}
                 </router-link>
     </h4>
   </main>
@@ -25,12 +48,12 @@ export default {
   },
   data () {
     return {
-      projectNames: [
-        ['Cryptogram Game', 1],
-        ['Either & Maybe in Typescript', 2],
-        ['D&D Assistant', 3],
-        ['Groupme Electron App', 4],
-        ['Hello LA!', 5]
+      projectUrls: [
+        'cryptogram-game',
+        'either-maybe',
+        'dnd-assistant',
+        'groupme-client',
+        'hello-la'
       ]
     }
   }

@@ -23,7 +23,7 @@ export default new Router({
       component: Portfolio
     },
     {
-      path: '/portfolio/:id',
+      path: '/portfolio/:name',
       component: Project
     }
   ]

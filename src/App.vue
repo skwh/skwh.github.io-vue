@@ -3,12 +3,20 @@
     <transition :name="transitionName" mode="out-in">
       <router-view/>
     </transition>
+    <div id="locale">
+      <locale-changer></locale-changer>
+    </div>
   </div>
 </template>
 
 <script>
+import LocaleChanger from './components/LocaleChanger.vue'
+
 export default {
   name: 'App',
+  components: {
+    LocaleChanger
+  },
   data () {
     return {
       transitionName: 'slide-left'
@@ -25,6 +33,12 @@ export default {
 </script>
 
 <style>
+
+#locale {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+}
 
 .slide-left-enter, .slide-right-leave-active {
   opacity: 0;

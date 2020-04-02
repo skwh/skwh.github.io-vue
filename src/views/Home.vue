@@ -1,19 +1,33 @@
+<i18n>
+{
+  "en": {
+    "position": "Full-Stack Developer & UI/UX Engineer",
+    "resume": "Resumé",
+    "contact": "Contact Me"
+  },
+  "de": {
+    "position": "Fullstack Web- und UI/UX Entwickler",
+    "resume": "Resümee",
+    "contact": "Kontakt"
+  }
+}
+</i18n>
 <template>
   <main class='centered'>
     <h1>Evan Derby</h1>
-    <h4 class="subtitle">Full-Stack Developer &amp; UI/UX Engineer</h4>
+    <h4 class="subtitle">{{ $t('position') }}</h4>
     <h3>
       <router-link class="in internal-link"
-                   to="/portfolio">Portfolio</router-link>
+                   to="/portfolio">{{ $t('portfolio') }}</router-link>
     </h3>
     <h3>
       <a class="in"
          target="_blank"
-         :href="`${baseUrl}Resume_9.pdf`">Resume</a>
+         :href="`${baseUrl}Resume_9.pdf`">{{ $t('resume') }}</a>
     </h3>
     <h3>
       <router-link class="in internal-link"
-                   to="/contact-me">Contact Me</router-link>
+                   to="/contact-me">{{ $t('contact') }}</router-link>
     </h3>
   </main>
 </template>
