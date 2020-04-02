@@ -39,7 +39,7 @@ export default {
     return {
       pages: [
         ['Portfolio', '/portfolio'],
-        ['Resume', process.env.BASE_URL + 'Resume_9.pdf'],
+        ['Resume', process.env.BASE_URL + 'Resume_11.pdf'],
         ['Contact Me', '/contact-me']
       ],
       baseUrl: process.env.BASE_URL
