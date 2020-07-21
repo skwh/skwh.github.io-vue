@@ -18,28 +18,31 @@
     <h4 class="subtitle">{{ $t('position') }}</h4>
     <h3>
       <router-link class="in internal-link"
-                   to="/portfolio">{{ $t('portfolio') }}</router-link>
+                   :to="pages[0][1]">{{ $t('portfolio') }}</router-link>
     </h3>
     <h3>
       <a class="in"
          target="_blank"
-         :href="`${baseUrl}Resume_11.pdf`">{{ $t('resume') }}</a>
+         :href="pages[1][1]">{{ $t('resume') }}</a>
     </h3>
     <h3>
       <router-link class="in internal-link"
-                   to="/contact-me">{{ $t('contact') }}</router-link>
+                   :to="pages[2][1]">{{ $t('contact') }}</router-link>
     </h3>
   </main>
 </template>
 
 <script>
+
+const RESUME_VERSION = 12
+
 export default {
   name: 'Home',
   data () {
     return {
       pages: [
         ['Portfolio', '/portfolio'],
-        ['Resume', process.env.BASE_URL + 'Resume_11.pdf'],
+        ['Resume', `${process.env.BASE_URL}Resume_${RESUME_VERSION}.pdf`],
         ['Contact Me', '/contact-me']
       ],
       baseUrl: process.env.BASE_URL
