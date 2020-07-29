@@ -34,7 +34,7 @@
 
 <script>
 
-const RESUME_VERSION = 12
+const RESUME_VERSION = 13
 
 export default {
   name: 'Home',
